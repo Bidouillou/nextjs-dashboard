@@ -31,6 +31,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
         className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
         placeholder={placeholder}
         onChange={(e) => {
+          // pour ts, type e = React.ChangeEvent<HTMLInputElement>
           handleSearch(e.target.value);
         }}
         //if link is pasted, it allows you to fill the input with the query which is found in the url
